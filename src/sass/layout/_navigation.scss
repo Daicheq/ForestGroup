@@ -4,39 +4,126 @@
 	position: fixed;
 	top: 0;
 	display: flex;
-	justify-content: space-between;
-	height: 6.2rem;
+	height: 10rem;
 	width: 100%;
+	background-color: $white;
+}
+
+.nav-desktop {
+	display: none;
 }
 
 .nav-mobile {
 	&-btn {
+		position: absolute;
+		right: 0;
 		display: flex;
 		align-items: center;
-		margin-left: 0.2em;
-		font-size: 4.6rem;
+		padding: 0.2em 0.3em;
+		height: 100%;
+		font-size: 5.6rem;
+		color: $darker-color;
+		cursor: pointer;
 	}
 
 	&-items {
 		position: absolute;
-		top: 6.2rem;
+		top: 10rem;
 		right: -100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		height: calc(100vh - 10rem);
 		width: 100%;
-		height: calc(100vh - 6.2rem);
+		background-color: $white;
 		transition: right 0.4s;
 
 		&-active {
 			right: 0;
 		}
 	}
-	&-item {
-		display: block;
-		margin: 0.6em 0;
-		text-decoration: none;
-		font-size: 2.6em;
-		color: $black-color;
+}
+
+.nav-item {
+	display: block;
+	margin: 0.6em 0;
+	padding: 0.35em 0;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-size: 2.2em;
+	color: $black;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.nav {
+		justify-content: center;
 	}
+
+	.nav-mobile {
+		display: none;
+	}
+	.nav-desktop {
+		display: flex;
+		width: 100%;
+		&-logo {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 0 0.4em;
+			height: 100%;
+			font-size: 4.1rem;
+			color: $dark-color;
+			&-text {
+				margin-left: 0.2em;
+				color: $black;
+			}
+			&-link {
+				text-decoration: none;
+			}
+		}
+
+		&-items {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+		}
+	}
+	.nav-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 0.5em;
+		padding: 0 0.2em;
+		height: 100%;
+		width: 15%;
+		font-size: 1.3em;
+		transition: color 0.3s, background-color 0.3s;
+	}
+	.nav-item:hover {
+		color: $white;
+		background-color: black;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.nav-item {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
 }

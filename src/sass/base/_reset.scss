@@ -11,6 +11,9 @@ html {
 	scroll-behavior: smooth;
 }
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: 'Lato', sans-serif;
 	font-size: 1.6rem;
+	overflow: hidden;
 }
