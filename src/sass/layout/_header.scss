@@ -59,12 +59,12 @@
 			position: absolute;
 			left: 45%;
 			text-align: left;
-			h1 {
+			.header_heading {
 				margin-top: 0.3em;
 				font-size: 4.2rem;
 			}
 
-			p {
+			.header__text {
 				font-size: 2.4rem;
 			}
 		}
