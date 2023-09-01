@@ -8,7 +8,7 @@
 	width: 100%;
 	background-color: $white;
 	z-index: 1000;
-	&-logo {
+	&__logo {
 		position: absolute;
 		display: flex;
 		align-items: center;
@@ -27,12 +27,13 @@
 	}
 }
 
-.nav-desktop {
+.nav__desktop {
 	display: none;
 }
 
-.nav-mobile {
-	&-items {
+.nav__mobile {
+	
+	&-box {
 		position: absolute;
 		top: 10rem;
 		right: -100%;
@@ -44,7 +45,7 @@
 		background-color: $white;
 		transition: right 0.4s;
 
-		&-active {
+		&--active {
 			right: 0;
 		}
 	}
@@ -71,10 +72,10 @@
 		justify-content: center;
 	}
 
-	.nav-mobile {
+	.nav__mobile {
 		display: none;
 	}
-	.nav-desktop {
+	.nav__desktop {
 		display: flex;
 		width: 100%;
 

@@ -1,17 +1,33 @@
-const navMobileItems = document.querySelector('.nav-mobile-items')
-const burgerBtn = document.querySelector('.nav-mobile-btn')
+const navMobileBox = document.querySelector('.nav__mobile-box')
+const allNavItems = document.querySelectorAll('.nav__mobile-box .nav-item')
+const navLogo = document.querySelector('.nav__logo')
+const burgerBtn = document.querySelector('.nav__mobile-btn')
 const body = document.querySelector('body')
 
-const showMobileMenu = () => {
-	navMobileItems.classList.toggle('nav-mobile-items-active')
+const handleNav = () => {
 	if (body.style.overflow === 'visible') {
 		body.style.overflow = 'hidden'
 	} else {
 		body.style.overflow = 'visible'
 	}
+
+	navMobileBox.classList.toggle('nav__mobile-box--active')
+
+	allNavItems.forEach(item => {
+		item.addEventListener('click', () => {
+			navMobileBox.classList.remove('nav__mobile-box--active')
+			burgerBtn.classList.remove('is-active')
+		})
+	})
+	navLogo.addEventListener('click', () => {
+		navMobileBox.classList.remove('nav__mobile-box--active')
+		burgerBtn.classList.remove('is-active')
+	})
 }
 
-burgerBtn.addEventListener('click', showMobileMenu)
+const handleBurgerBtnAnimation = () => {
+	burgerBtn.classList.toggle('is-active')
+}
 
-// TODO
-// DODAĆ chowanie menu po kliku nas start i w nav itemach
+burgerBtn.addEventListener('click', handleNav)
+burgerBtn.addEventListener('click', handleBurgerBtnAnimation)
