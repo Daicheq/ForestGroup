@@ -17,11 +17,13 @@ const handleNav = () => {
 		item.addEventListener('click', () => {
 			navMobileBox.classList.remove('nav__mobile-box--active')
 			burgerBtn.classList.remove('is-active')
+			body.style.overflow = 'visible'
 		})
 	})
 	navLogo.addEventListener('click', () => {
 		navMobileBox.classList.remove('nav__mobile-box--active')
 		burgerBtn.classList.remove('is-active')
+		body.style.overflow = 'visible'
 	})
 }
 
