@@ -6,4 +6,5 @@
 @use 'components/hamburger' as *;
 @use 'layout/header' as *;
 @use 'utils/shadow' as *;
-@use 'layout/aboutUs';
+@use 'layout/aboutUs' as *;
+@use 'layout/heroSection' as *;
