@@ -17,10 +17,12 @@
 <body>
     <nav class="nav">
     <div class="nav__mobile">
-        <div class="nav__logo">
-            <i class="fa-solid fa-tree"></i>
-            <span class="nav__logo-text">Forest</span>
-        </div>
+        <a class="nav__logo-link" href="#">
+            <div class="nav__logo">
+                <i class="fa-solid fa-tree"></i>
+                <span class="nav__logo-text">Forest</span>
+            </div>
+        </a>
         <button class="nav__mobile-btn hamburger hamburger--spin">
             <div class="hamburger-box">
                 <div class="hamburger-inner"></div>
@@ -29,7 +31,7 @@
         <div class="nav__mobile-box">
             <a class="nav-item" href="#">Home</a>
             <a class="nav-item" href="#about-us">O nas</a>
-            <a class="nav-item" href="#">Oferta</a>
+            <a class="nav-item" href="#offer">Oferta</a>
             <a class="nav-item" href="#">Kontakt</a>
         </div>
     </div>
@@ -45,7 +47,7 @@
         <div class="nav__desktop-items">
             <a class="nav-item" href="#">Home</a>
             <a class="nav-item" href="#about-us">O nas</a>
-            <a class="nav-item" href="#">Oferta</a>
+            <a class="nav-item" href="#offer">Oferta</a>
             <a class="nav-item" href="#">Kontakt</a>
         </div>
     </div>
@@ -87,7 +89,7 @@
         </div>
     </div>
 </section>
-        <section class="section offer wrapper">
+        <section id='offer' class="section offer wrapper">
     <h2 class="offer__heading section__heading">oferta</h2>
     <p class="offer__text">
         Wybierz jedną z naszych wspaniałych ofert!
@@ -112,7 +114,7 @@
                 Standard
             </p>
             <p class="offer__card-prize">$99</p>
-            <ul class="offer__card-list"> 
+            <ul class="offer__card-list">
                 <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
                 <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
                 <li><i class="fa-solid fa-check"></i> opcja w pakiecie</li>
@@ -136,8 +138,40 @@
             <button class="offer__card-btn">Wybierz</button>
         </div>
     </div>
-</section>
+</section> `
     </main>
+      <footer class="footer">
+    <div class="footer__container wrapper">
+        <div class="footer__logo">
+            <i class="fa-solid fa-tree"></i>
+            <span class="footer__logo-text">Forest</span>
+        </div>
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <h4 class="footer__box-header">O nas</h4>
+                <a href='#' class="footer__box-item">Historia</a>
+                <a href='#' class="footer__box-item">Parki</a>
+                <a href='#' class="footer__box-item">Opinie</a>
+            </div>
+            <div class="footer__box">
+                <h4 class="footer__box-header">Nasza firma</h4>
+                <a href='#' class="footer__box-item">Praca</a>
+                <a href='#' class="footer__box-item">Kadry</a>
+                <a href='#' class="footer__box-item">Zarząd</a>
+            </div>
+            <div class="footer__box">
+                <h4 class="footer__box-header">Dokumenty</h4>
+                <a href='#' class="footer__box-item">Wnioski</a>
+                <a href='#' class="footer__box-item">Rezerwacje</a>
+            </div>
+        </div>
+
+        <div class="footer__line"></div>
+        <p class="footer__license">&copy; 2023 Forest Group Company Ltd.</p>
+        <!-- dodać skrypt -->
+    </div>
+
+</footer>
     <script src="/dist/js/script.min.js"></script>
 </body>
 

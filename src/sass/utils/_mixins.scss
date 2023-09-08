@@ -1,0 +1,10 @@
+@use '../utils/variables' as *;
+
+@mixin logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 0.4em;
+	height: 100%;
+	color: $dark-color;
+}

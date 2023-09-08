@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .nav {
 	position: fixed;
@@ -10,13 +11,8 @@
 	z-index: 1000;
 	&__logo {
 		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		padding: 0 0.4em;
-		height: 100%;
+		@include logo;
 		font-size: 3.4rem;
-		color: $dark-color;
 		&-text {
 			margin-left: 0.2em;
 			color: $black;
@@ -32,7 +28,6 @@
 }
 
 .nav__mobile {
-	
 	&-box {
 		position: absolute;
 		top: 10rem;
