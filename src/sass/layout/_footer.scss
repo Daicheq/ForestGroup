@@ -13,34 +13,41 @@
 
 	&__boxes {
 		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	&__box {
 		display: flex;
 		flex-direction: column;
-		justify-content: start;
+		justify-content: flex-start;
 		align-items: center;
+		margin-top: 0.5em;
 		padding: 0 0.5em;
 		height: 25vh;
+		width: 50%;
 		text-align: center;
 		&-header {
-			margin-bottom: 1em;
-			font-size: 1.4rem;
+			margin: 1em 0;
+			font-size: 1.6rem;
 		}
 		&-item {
-			padding: 0.5em 0;
+			padding: 0.5em 0.2em;
 			text-decoration: none;
 			color: $dark-color;
-			font-size: 1.3rem;
+			font-size: 1.4rem;
 		}
 	}
 	&__logo {
-		display: none;
+		@include logo;
+		margin-bottom: 0.5em;
+		font-size: 4rem;
+		text-align: center;
+		bottom: 0;
 
-		// margin-bottom: 0.5em;
-		// font-size: 4rem;
-		// text-align: center;
-		// bottom: 0;
+		&-text {
+			margin-left: 0.2em;
+		}
 	}
 
 	&__line {
@@ -50,7 +57,67 @@
 	}
 
 	&__license {
-		margin-top: 1em;
+		padding: 2em 0;
+		text-align: center;
+		font-size: 1.4rem;
 		color: $dark-color;
+	}
+}
+
+@media (min-width: 576px) {
+	.footer {
+		&__boxes {
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			width: 100%;
+		}
+
+		&__box {
+			width: 30%;
+
+			&-header {
+				font-size: 1.8rem;
+			}
+			&-item {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		&__logo {
+			justify-content: center;
+			width: 50%;
+			font-size: 4.8rem;
+		}
+		&__container {
+			flex-direction: row;
+			justify-content: center;
+		}
+		&__boxes {
+			justify-content: center;
+			width: 50%;
+		}
+
+		&__box {
+			height: 100%;
+			align-items: flex-start;
+			&-header {
+				font-size: 2rem;
+			}
+			&-item {
+				padding: 0.5em 0em;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.footer {
+		&__license {
+			font-size: 1.6rem;
+		}
 	}
 }
