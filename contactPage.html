@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForestGroup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5ce280c1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+    <div class="nav__mobile">
+        <a class="nav__logo-link" href="#">
+            <div class="nav__logo">
+                <i class="fa-solid fa-tree"></i>
+                <span class="nav__logo-text">Forest</span>
+            </div>
+        </a>
+        <button class="nav__mobile-btn hamburger hamburger--spin">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </button>
+        <div class="nav__mobile-box">
+            <a class="nav-item" href="#">Home</a>
+            <a class="nav-item" href="#about-us">O nas</a>
+            <a class="nav-item" href="#offer">Oferta</a>
+            <a class="nav-item" href="#">Kontakt</a>
+        </div>
+    </div>
+
+    </div>
+    <div class="nav__desktop wrapper">
+        <a class="nav__logo-link" href="#">
+            <div class="nav__logo">
+                <i class="fa-solid fa-tree"></i>
+                <span class="nav__logo-text">Forest</span>
+            </div>
+        </a>
+        <div class="nav__desktop-items">
+            <a class="nav-item" href="#">Home</a>
+            <a class="nav-item" href="#about-us">O nas</a>
+            <a class="nav-item" href="#offer">Oferta</a>
+            <a class="nav-item" href="#">Kontakt</a>
+        </div>
+    </div>
+</nav>
+    <main class="main">
+        <section class="contact wrapper">
+            <form class="contact__form">
+                <div class="contact__form-left">
+                    <h3 class="contact__form-left__heading">
+                        Bądźmy w kontakcie!
+                    </h3>
+                    <p class="contact__form-left__text"> Masz pytania? Napisz, zadzwoń albo spotkajmy się osobiście!
+                    </p>
+                    <div class="contact__form-left__info">
+                        <p class="contact__form-left__info-item"><i class="fa-solid fa-location-dot"></i> ul.
+                            Jasnogórska 2
+                            31-358 Kraków</p>
+                        <p class="contact__form-left__info-item"><i class="fa-solid fa-phone"></i> +48 999 998 997</p>
+                        <p class="contact__form-left__info-item"><i class="fa-solid fa-envelope"></i>
+                            mail@mail.pl</p>
+                    </div>
+                </div>
+                <div class="contact__form-right">
+                    <h3 class="contact__form-right__heading">
+                        Skontakuj się z nami! </h3>
+                    <div class="contact__form-right__box">
+                        <label for="contact-name" class="contact-label">Imię i nazwisko</label>
+                        <input type="text" class="contact-input" id="contact-name" placeholder="Imię i nazwisko">
+                    </div>
+                    <div class="contact__form-right__box">
+                        <label for="contact-mail" class="contact-label">Adres e-mail</label>
+                        <input type="email" class="contact-input" id="contact-mail" placeholder="E-mail">
+                    </div>
+                    <div class="contact__form-right__box">
+                        <label for="contact-title" class="contact-label">Temat</label>
+                        <input type="text" class="contact-input" id="contact-title" placeholder="Temat">
+                    </div>
+                    <div class="contact__form-right__box">
+                        <label for="contact-message" class="contact-label">Wiadomość</label>
+                        <textarea class="contact-message" id="contact-message" placeholder="Wiadomość"></textarea>
+                    </div>
+                    <button class="contact__form-btn">
+                        Wyślij
+                    </button>
+
+                </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+    <footer class="footer">
+    <div class="footer__container wrapper">
+        <div class="footer__logo">
+            <i class="fa-solid fa-tree"></i>
+            <span class="footer__logo-text">Forest</span>
+        </div>
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <h4 class="footer__box-header">O nas</h4>
+                <a href='#' class="footer__box-item">Historia</a>
+                <a href='#' class="footer__box-item">Parki</a>
+                <a href='#' class="footer__box-item">Opinie</a>
+            </div>
+            <div class="footer__box">
+                <h4 class="footer__box-header">Nasza firma</h4>
+                <a href='#' class="footer__box-item">Praca</a>
+                <a href='#' class="footer__box-item">Kadry</a>
+                <a href='#' class="footer__box-item">Zarząd</a>
+            </div>
+            <div class="footer__box">
+                <h4 class="footer__box-header">Dokumenty</h4>
+                <a href='#' class="footer__box-item">Wnioski</a>
+                <a href='#' class="footer__box-item">Rezerwacje</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer__line"></div>
+    <p class="footer__license">&copy; <span class="year-span"></span> Forest Group Company Ltd.</p>
+
+</footer>
+    <script src="/dist/js/script.min.js"></script>
+</body>
+
+</html>
