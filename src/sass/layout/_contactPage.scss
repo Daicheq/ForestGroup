@@ -5,14 +5,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 8em 0 5em;
+	margin: 8em 0 2em;
 	&__form {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-content: center;
 		width: 80%;
-		height: 160vh;
+		height: 120vh;
 		&-left {
 			padding: 1.2em 0.5em;
 			background-color: $green-color;
@@ -100,6 +100,86 @@
 
 			&:hover {
 				background-color: $light-green;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		&__form {
+			flex-direction: row;
+			width: 80%;
+			height: 60rem;
+			&-left {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 35%;
+
+				&__info-item {
+					font-size: 2rem;
+				}
+			}
+
+			&-right {
+				width: 65%;
+				order: 0;
+
+				&__box {
+					.contact-input,
+					.contact-message {
+						margin-top: 0.5em;
+						font-size: 1.6rem;
+					}
+					.contact-input {
+						height: 3rem;
+					}
+					.contact-message {
+						height: 8rem;
+						max-height: 8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact {
+		&__form {
+			height: 65rem;
+			width: 90%;
+
+			&-left {
+				&__heading {
+					margin-bottom: 1.4em;
+					font-size: 2.4rem;
+				}
+				&__text {
+					margin-bottom: 4em;
+					font-size: 1.8rem;
+				}
+			}
+			&-right {
+				&__heading {
+					margin: 1em 0 1em;
+					font-size: 2.6rem;
+				}
+				&__box {
+					.contact-input,
+					.contact-message {
+						font-size: 1.8rem;
+					}
+
+					.contact-message {
+						height: 12rem;
+						max-height: 12rem;
+					}
+				}
+				.contact-label {
+					font-size: 1.6rem;
+				}
 			}
 		}
 	}
