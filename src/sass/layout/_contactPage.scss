@@ -1,6 +1,9 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+.main {
+	margin-bottom: 10em;
+}
 .contact {
 	display: flex;
 	justify-content: center;
@@ -146,6 +149,9 @@
 }
 
 @media (min-width: 1200px) {
+	.main {
+		margin-bottom: 5em;
+	}
 	.contact {
 		&__form {
 			height: 65rem;

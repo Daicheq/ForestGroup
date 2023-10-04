@@ -92,10 +92,6 @@
 		font-size: 1.8rem;
 		transition: color 0.3s, background-color 0.3s;
 	}
-	.nav-item:hover {
-		color: $white;
-		background-color: black;
-	}
 }
 
 // Large devices (desktops, 992px and up)
@@ -118,8 +114,7 @@
 	}
 }
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
+.active {
+	background-color: $black;
+	color: $white;
 }
-
-
