@@ -1,11 +1,14 @@
 const navMobileBox = document.querySelector('.nav__mobile-box')
-const allNavItems = document.querySelectorAll('.nav__mobile-box .nav-item')
+const allNavItems = document.querySelectorAll('.nav-item')
 const navLogo = document.querySelector('.nav__logo')
 const burgerBtn = document.querySelector('.nav__mobile-btn')
 const body = document.querySelector('body')
 const yearSpan = document.querySelector('.year-span')
 const sections = document.querySelectorAll('section')
 const navLinksDesktop = document.querySelectorAll('.nav__desktop-items .nav-item')
+const homeLink = document.querySelector(`.nav__desktop-items .nav-item[href="index.html#"]`)
+const contactLink = document.querySelector(`.nav__desktop-items .nav-item[href="contactPage.html"]`)
+const pageLink = window.location.pathname
 
 const handleNav = () => {
 	if (body.style.overflow === 'visible') {
@@ -42,10 +45,9 @@ const handleYear = () => {
 }
 
 const handleScrollSpy = () => {
-	const scrollY = window.scrollY || window.pageYOffset
+	const scrollY = window.scrollY
 
 	if (scrollY === 0) {
-		const homeLink = document.querySelector(`.nav__desktop-items .nav-item[href="#"]`)
 		navLinksDesktop.forEach(link => {
 			link.classList.remove('active')
 		})
@@ -62,7 +64,7 @@ const handleScrollSpy = () => {
 					link.classList.remove('active')
 				})
 
-				const correspondingLink = document.querySelector(`.nav__desktop-items .nav-item[href="#${id}"]`)
+				const correspondingLink = document.querySelector(`.nav__desktop-items .nav-item[href="index.html#${id}"]`)
 
 				if (correspondingLink) {
 					correspondingLink.classList.add('active')
@@ -72,7 +74,14 @@ const handleScrollSpy = () => {
 	}
 }
 
-document.addEventListener('scroll', handleScrollSpy)
 burgerBtn.addEventListener('click', handleNav)
 burgerBtn.addEventListener('click', handleBurgerBtnAnimation)
+document.addEventListener('scroll', handleScrollSpy)
 document.addEventListener('DOMContentLoaded', handleYear)
+
+window.addEventListener('load', function () {
+	if (pageLink === '/contactPage.html') {
+		homeLink.classList.remove('active')
+		contactLink.classList.add('active')
+	}
+})
