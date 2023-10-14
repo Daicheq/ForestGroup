@@ -10,6 +10,7 @@ html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 	scroll-padding-top: 120px;
+	contain: paint;
 }
 body {
 	display: flex;
@@ -18,5 +19,4 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
-	overflow-x: hidden;
 }

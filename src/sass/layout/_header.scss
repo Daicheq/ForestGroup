@@ -1,9 +1,8 @@
 @use '../utils/variables' as *;
 @use '../utils/shadow' as *;
 .header {
-	width: 100%;
+	width: 100vw;
 	height: calc(100vh - 10rem);
-	margin-top: 10rem;
 	.hero-image {
 		position: relative;
 		height: 100%;

@@ -2,20 +2,19 @@
 @use '../utils/mixins' as *;
 
 .main {
-	margin-bottom: 10em;
+	height: 100%;
 }
 .contact {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 8em 0 2em;
+	margin-top: 10rem;
 	&__form {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-content: center;
 		width: 80%;
-		height: 120vh;
 		&-left {
 			padding: 1.2em 0.5em;
 			background-color: $green-color;
@@ -105,6 +104,18 @@
 				background-color: $light-green;
 			}
 		}
+	}
+}
+
+.location {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 8em 2em;
+
+	.iframe-map {
+		width: 100%;
+		overflow: hidden;
 	}
 }
 

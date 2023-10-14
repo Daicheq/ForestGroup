@@ -2,7 +2,7 @@ const navMobileBox = document.querySelector('.nav__mobile-box')
 const allNavItems = document.querySelectorAll('.nav-item')
 const navLogo = document.querySelector('.nav__logo')
 const burgerBtn = document.querySelector('.nav__mobile-btn')
-const body = document.querySelector('body')
+const htmlTag = document.querySelector('html')
 const yearSpan = document.querySelector('.year-span')
 const sections = document.querySelectorAll('section')
 const navLinksDesktop = document.querySelectorAll('.nav__desktop-items .nav-item')
@@ -11,10 +11,10 @@ const contactLink = document.querySelector(`.nav__desktop-items .nav-item[href="
 const pageLink = window.location.pathname
 
 const handleNav = () => {
-	if (body.style.overflow === 'visible') {
-		body.style.overflow = 'hidden'
+	if (htmlTag.style.overflow === 'hidden') {
+		htmlTag.style.overflow = 'visible'
 	} else {
-		body.style.overflow = 'visible'
+		htmlTag.style.overflow = 'hidden'
 	}
 
 	navMobileBox.classList.toggle('nav__mobile-box--active')
@@ -23,13 +23,13 @@ const handleNav = () => {
 		item.addEventListener('click', () => {
 			navMobileBox.classList.remove('nav__mobile-box--active')
 			burgerBtn.classList.remove('is-active')
-			body.style.overflow = 'visible'
+			htmlTag.style.overflow = 'visible'
 		})
 	})
 	navLogo.addEventListener('click', () => {
 		navMobileBox.classList.remove('nav__mobile-box--active')
 		burgerBtn.classList.remove('is-active')
-		body.style.overflow = 'visible'
+		htmlTag.style.overflow = 'visible'
 	})
 }
 
@@ -47,17 +47,24 @@ const handleYear = () => {
 const handleScrollSpy = () => {
 	const scrollY = window.scrollY
 
-	if (scrollY === 0) {
+	if (pageLink.endsWith('/contactPage.html')) {
+		homeLink.classList.remove('active')
+		contactLink.classList.add('active')
+	} else if (pageLink.endsWith('/offerPage.html')) {
+		navLinksDesktop.forEach(link => {
+			link.classList.remove('active')
+		})
+	} else if (scrollY === 0) {
 		navLinksDesktop.forEach(link => {
 			link.classList.remove('active')
 		})
 		homeLink.classList.add('active')
 	} else {
 		sections.forEach(sec => {
-			let top = window.scrollY
-			let offset = sec.offsetTop - 150
-			let height = sec.offsetHeight
-			let id = sec.getAttribute('id')
+			const top = window.scrollY
+			const offset = sec.offsetTop - 150
+			const height = sec.offsetHeight
+			const id = sec.getAttribute('id')
 
 			if (top >= offset && top < offset + height) {
 				navLinksDesktop.forEach(link => {
@@ -83,5 +90,11 @@ window.addEventListener('load', function () {
 	if (pageLink === '/contactPage.html') {
 		homeLink.classList.remove('active')
 		contactLink.classList.add('active')
+	} else if (pageLink.endsWith('/offerPage.html')) {
+		navLinksDesktop.forEach(link => {
+			link.classList.remove('active')
+		})
+	} else {
+		handleScrollSpy()
 	}
 })

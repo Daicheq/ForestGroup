@@ -2,13 +2,14 @@
 @use '../utils/mixins' as *;
 
 .nav {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	display: flex;
 	height: 10rem;
 	width: 100%;
 	background-color: $white;
 	z-index: 1000;
+
 	&__logo {
 		position: absolute;
 		@include logo;
@@ -38,10 +39,13 @@
 		height: calc(100vh - 10rem);
 		width: 100%;
 		background-color: $white;
+		visibility: hidden;
 		transition: right 0.4s;
 
 		&--active {
 			right: 0;
+			visibility: visible;
+			overflow: hidden;
 		}
 	}
 }
@@ -59,10 +63,6 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
 	.nav {
 		justify-content: center;
 	}
@@ -92,6 +92,10 @@
 		font-size: 1.8rem;
 		transition: color 0.3s, background-color 0.3s;
 	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
 }
 
 // Large devices (desktops, 992px and up)
