@@ -61,7 +61,7 @@
 	color: $black;
 }
 
-// Small devices (landscape phones, 576px and up)
+
 @media (min-width: 576px) {
 	.nav {
 		justify-content: center;
@@ -94,11 +94,9 @@
 	}
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-}
 
-// Large devices (desktops, 992px and up)
+
+
 @media (min-width: 992px) {
 	.nav-item {
 		margin: 0;
@@ -106,7 +104,7 @@
 	}
 }
 
-// X-Large devices (large desktops, 1200px and up)
+
 @media (min-width: 1200px) {
 	.nav {
 		&-logo {

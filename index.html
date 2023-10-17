@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Raleway:wght@400;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/b5ce280c1f.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
@@ -52,12 +53,14 @@
         </div>
     </div>
 </nav>
-    <header class="header" >
+    <header class="header">
     <div class="hero-image">
         <div class="shadow"></div>
         <div class="hero-text">
-            <p class="header__text">Forest Group</p>
-            <h1 class="header__heading">Najpiękniejszy park w Twojej okolicy!</h1>
+            <p class="header__text" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-once="true">Forest
+                Group</p>
+            <h1 class="header__heading" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-once="true">
+                Najpiękniejszy park w Twojej okolicy!</h1>
         </div>
     </div>
 </header>
@@ -85,7 +88,7 @@
         <section class="hero-section">
     <div class="hero-section__image">
         <div class="shadow"></div>
-        <div class="hero-section__text">
+        <div class="hero-section__text" data-aos="zoom-out" data-aos-once="true">
             <h2 class="hero-section__heading">Przygoda dla całej rodziny</h2>
         </div>
     </div>
@@ -96,7 +99,7 @@
         Wybierz jedną z naszych wspaniałych ofert!
     </p>
     <div class="offer__cards">
-        <div class="offer__card card-one">
+        <div class="offer__card card-one" data-aos="flip-left" data-aos-once="true">
             <p class="offer__card-heading">
                 Demo
             </p>
@@ -109,8 +112,8 @@
                 <li><i class="fa-solid fa-minus"></i> opcja poza pakietem</li>
             </ul>
             <button class="offer__card-btn">Wybierz</button>
-        </div>
-        <div class="offer__card card-two">
+        </div> 
+        <div class="offer__card card-two" data-aos="flip-left" data-aos-delay="200" data-aos-once="true">
             <p class="offer__card-heading">
                 Standard
             </p>
@@ -124,7 +127,7 @@
             </ul>
             <button class="offer__card-btn offer__card-btn--green">Wybierz</button>
         </div>
-        <div class="offer__card card-three">
+        <div class="offer__card card-three" data-aos="flip-left" data-aos-delay="300" data-aos-once="true">
             <p class="offer__card-heading">
                 Premium
             </p>
@@ -140,8 +143,8 @@
         </div>
     </div>
 
-    <p class="offer__page-text">
-        Zajrzyj po <a href='./offerPage.html' class="offer__page-text__link">więcej ofert!</a>
+    <p class="offer__page-text heartbeat">
+        Zajrzyj po <a href='./offerPage.html' class="offer__page-text__link ">więcej ofert!</a>
     </p>
 </section>
     </main>
@@ -176,6 +179,16 @@
     <p class="footer__license">&copy; <span class="year-span"></span> Forest Group Company Ltd.</p>
 
 </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: 'mobile',
+            offset: 100,
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 10,
+        });
+    </script>
     <script src="./dist/js/script.min.js"></script>
 </body>
 

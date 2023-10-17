@@ -11,12 +11,7 @@ const contactLink = document.querySelector(`.nav__desktop-items .nav-item[href="
 const pageLink = window.location.pathname
 
 const handleNav = () => {
-	if (htmlTag.style.overflow === 'hidden') {
-		htmlTag.style.overflow = 'visible'
-	} else {
-		htmlTag.style.overflow = 'hidden'
-	}
-
+	handleOverflowSet()
 	navMobileBox.classList.toggle('nav__mobile-box--active')
 
 	allNavItems.forEach(item => {
@@ -31,6 +26,14 @@ const handleNav = () => {
 		burgerBtn.classList.remove('is-active')
 		htmlTag.style.overflow = 'visible'
 	})
+}
+
+const handleOverflowSet = () => {
+	if (htmlTag.style.overflow === 'hidden') {
+		htmlTag.style.overflow = 'visible'
+	} else {
+		htmlTag.style.overflow = 'hidden'
+	}
 }
 
 const handleBurgerBtnAnimation = () => {

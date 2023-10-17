@@ -1,3 +1,4 @@
+@use '../utils/variables' as *;
 *,
 *::before,
 *::after {
@@ -19,4 +20,17 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
+}
+
+body::-webkit-scrollbar {
+	width: 0.8rem; 
+}
+
+body::-webkit-scrollbar-track {
+	background: $white;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $dark-green;
+	border-radius: 3rem;
 }
