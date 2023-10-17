@@ -1,5 +1,5 @@
 @use 'base/reset' as *;
-@use 'utils/variables' as *;
+@use 'utils/colors' as *;
 @use 'components/wrapper' as *;
 @use 'layout/navigation' as *;
 @use 'components/burgerBtn' as *;
@@ -11,5 +11,5 @@
 @use 'layout/offer' as *;
 @use 'layout/footer' as *;
 @use 'base/animations' as *;
-@use 'layout/offerPage';
-@use 'layout/contactPage';
+@use 'pages/offerPage';
+@use 'pages/contactPage';
