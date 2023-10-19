@@ -9,6 +9,7 @@ const navLinksDesktop = document.querySelectorAll('.nav__desktop-items .nav-item
 const homeLink = document.querySelector(`.nav__desktop-items .nav-item[href="index.html#"]`)
 const contactLink = document.querySelector(`.nav__desktop-items .nav-item[href="contactPage.html"]`)
 const pageLink = window.location.pathname
+const portrait = window.matchMedia('(orientation: portrait)')
 
 const handleNav = () => {
 	handleOverflowSet()
@@ -88,16 +89,23 @@ burgerBtn.addEventListener('click', handleNav)
 burgerBtn.addEventListener('click', handleBurgerBtnAnimation)
 document.addEventListener('scroll', handleScrollSpy)
 document.addEventListener('DOMContentLoaded', handleYear)
-
 window.addEventListener('load', function () {
-	if (pageLink === '/contactPage.html') {
+	if (pageLink.endsWith('/contactPage.html')) {
 		homeLink.classList.remove('active')
 		contactLink.classList.add('active')
-	} else if (pageLink.endsWith('/offerPage.html')) {
+	} else if (pageLink.endsWith('offerPage.html')) {
 		navLinksDesktop.forEach(link => {
 			link.classList.remove('active')
 		})
 	} else {
 		handleScrollSpy()
+	}
+})
+
+portrait.addEventListener('change', function (e) {
+	if (e.matches) {
+		handleOverflowSet()
+	} else {
+		handleOverflowSet()
 	}
 })
